@@ -13,21 +13,24 @@ Features
 The main executable "pmu_pub" measures:
 
 - Per-core performance counters
- - Instructions retired 
- - Un-halted core clock cycles at the current frequency 
- - Un-halted core clock cycles at the reference frequency
- - Temperature
- - Time stamp counter
- - Cycles in C3 state
- - Cycles in C6 state
- - Aperf Cycles
- - Mperf Cycles
- - Programmable PMU events
+
+  - Instructions retired 
+  - Un-halted core clock cycles at the current frequency 
+  - Un-halted core clock cycles at the reference frequency
+  - Temperature
+  - Time stamp counter
+  - Cycles in C3 state
+  - Cycles in C6 state
+  - Aperf Cycles
+  - Mperf Cycles
+  - Programmable PMU events
+
 - Per-CPU/Socket
- - Package temperature
- - Package energy
- - DRAM energy
- - Programmable Uncore events
+
+  - Package temperature
+  - Package energy
+  - DRAM energy
+  - Programmable Uncore events
 
 
 The measured data are sent over the network using the MQTT protocol (TCP/IP).
@@ -66,9 +69,11 @@ Repository organization
 The repository is structured as follow:
 
 - Publishers: this folder contains the MQTT publishers’ plugins.
- - in this framework release, it contains the pmu_pub plugin.
+
+  - in this framework release, it contains the pmu_pub plugin.
 - Parser: this folder contains the software components that run in the Front-end side of the framework and process MQTT data delivered by the publishers
- - The pmu_pub_sp.py script provides an example of how to calculate additional metrics in real time, starting from the data delivered by the pmu_pub plugin.
+
+  - The pmu_pub_sp.py script provides an example of how to calculate additional metrics in real time, starting from the data delivered by the pmu_pub plugin.
 - Collector: it contains the Collector component. The Collector library can be used in programs to retrive the pmu_pub monitored data directly from an application running on the monitored nodes. Please refer to the readme contained in the ./collector folder for more detailed information.
 - Lib: this folder contains external libraries needed by the framework.
 
