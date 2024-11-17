@@ -1,7 +1,11 @@
-Examon HPC Monitoring
-======================
+Pmu_pub plugin
+==============
 
-A highly scalable framework for the performance and energy monitoring of HPC servers
+pmu_pub provides an interface to the PMU (Performance Monitoring Unit) and RAPL (Running Average Power Limit) infrastructures of the Intel Xeon processor series.
+
+This plugin periodically samples the PMU and RAPL units and sends the data over the network using the MQTT protocol.
+
+The metrics are exported per-core and per-socket.
 
 
 Features
